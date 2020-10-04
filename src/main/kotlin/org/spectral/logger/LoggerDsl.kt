@@ -22,10 +22,3 @@ package org.spectral.logger
  * Global Spectral Logger Instance
  */
 val logger = Logger
-
-fun main() {
-    logger.debug("DEBUG")
-    logger.info("INFO")
-    logger.warn("WARN")
-    logger.error("ERROR")
-}
