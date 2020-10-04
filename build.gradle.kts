@@ -30,12 +30,10 @@ val sourcesJar by tasks.registering(Jar::class) {
 
 publishing {
     publications {
-        register("mavenKotlin", MavenPublication::class) {
+        create<MavenPublication>("logger") {
             groupId = "org.spectral"
             artifactId = "logger"
             version = Project.version
-            from(components["java"])
-            artifact(sourcesJar.get())
         }
     }
 }
