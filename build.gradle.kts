@@ -44,6 +44,8 @@ publishing {
             groupId = "org.spectral"
             artifactId = "logger"
             version = Project.version
+            from(components["java"])
+            artifact(sourcesJar.get())
         }
     }
 }
