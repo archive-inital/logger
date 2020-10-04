@@ -5,8 +5,12 @@ plugins {
     `maven-publish`
 }
 
+tasks.withType<Wrapper> {
+    gradleVersion = Project.gradleVersion
+}
+
 group = "org.spectral"
-version = "1.0.0"
+version = Project.version
 
 repositories {
     mavenLocal()
@@ -29,6 +33,12 @@ val sourcesJar by tasks.registering(Jar::class) {
 }
 
 publishing {
+    repositories {
+        maven {
+            url = uri("https://maven.pkg.github.com/spectral-powered/logger")
+        }
+    }
+
     publications {
         create<MavenPublication>("logger") {
             groupId = "org.spectral"

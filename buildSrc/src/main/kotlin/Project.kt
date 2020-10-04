@@ -20,14 +20,10 @@ import org.gradle.kotlin.dsl.DependencyHandlerScope
  */
 
 object Project {
-    const val version = "1.0.0"
+    const val version = "0.0.1"
     const val gradleVersion = "6.6.1"
     const val kotlinVersion = "1.4.10"
     val jvmVersion = JavaVersion.VERSION_11.toString()
-}
-
-object Plugin {
-    const val bintray = "1.8.5"
 }
 
 object Library {
