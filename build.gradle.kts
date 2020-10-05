@@ -36,6 +36,10 @@ publishing {
     repositories {
         maven {
             url = uri("https://maven.pkg.github.com/spectral-powered/logger")
+            credentials {
+                username = System.getenv("MAVEN_USERNAME")
+                password = System.getenv("MAVEN_TOKEN")
+            }
         }
     }
 
